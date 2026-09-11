@@ -57,5 +57,29 @@ public class Canteen {
             System.out.printf("%nSubtotal: $%.2f%n", subtotal);
             System.out.printf("Discount: $%.2f%n", discount);
             System.out.printf("Order total: $%.2f%n", orderTotal);
+
+             // Update total quantities and amounts
+            totalQuantity += quantity;
+            totalBeforeDiscount += subtotal;
+            totalDiscount += discount;
+            totalFinalAmount += orderTotal;
+        }
+
+            System.out.print("Do you want to order again? (Y/N): ");
+            orderAgain = input.next().charAt(0);
+            System.out.println();
+    
+} while (orderAgain == 'Y' || orderAgain == 'y');
+ 
+        System.out.println("==== ORDER SUMMARY ====\n");
+        System.out.println("Total items: " + totalQuantity);
+        System.out.printf("Total before discount: $%.2f%n", totalBeforeDiscount);
+        System.out.printf("Total discount: $%.2f%n", totalDiscount);
+        System.out.printf("Final amount: $%.2f%n%n", totalFinalAmount);
+        System.out.println("Thank you for ordering!");
+ 
+        input.close();
     }
 }
+
+
