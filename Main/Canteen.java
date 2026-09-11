@@ -80,6 +80,14 @@ public class Canteen {
  
         input.close();
     }
+
+    private static void displayMenu(String[] itemNames, double[] itemPrices) {
+        System.out.println("====    M E N U    ====\n");
+        for (int i = 0; i < itemNames.length; i++) {
+            System.out.printf("%d. %-20s - $%.2f%n", i + 1, itemNames[i], itemPrices[i]);
+        }
+          System.out.println();
+    }
 }
 
 
