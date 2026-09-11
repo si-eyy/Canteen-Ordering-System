@@ -1,4 +1,4 @@
-# Canteen Ordering System
+# Canteen Ordering System (˶˃ ᵕ ˂˶) .ᐟ.ᐟ
 
 A simple Java console application that simulates a school canteen ordering process. Customers can browse a menu, place one or more orders, and receive automatic discounts based on their student status and purchase amount.
 
@@ -92,4 +92,4 @@ Thank you for ordering!
 
 ## Author
 
-Charles Amelano 
+Charles Amelano  ᶻ 𝘇 𐰁 
