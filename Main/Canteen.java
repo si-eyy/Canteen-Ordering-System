@@ -19,7 +19,7 @@ public class Canteen {
 
         char orderAgain;
         do { 
-            System.out.print("Enter item number");
+            System.out.print("Enter item number: ");
             int itemNumber = input.nextInt();
 
             System.out.print("Enter quantity: ");
@@ -29,8 +29,7 @@ public class Canteen {
             boolean validQuantity = quantity >= 1 && quantity <= 10;
 
             if (!validItem || !validQuantity) {
-                System.out.println("\nInvalid order!\n");
-                System.out.println("\nPlease enter a valid item number and quantity.\n");
+                System.out.println("\nInvalid order! Please enter a valid item number and quantity.\n");
             } else {
                 System.out.print("Are you a student? (Y/N): ");
                 char studentAnswer = input.next().charAt(0);
