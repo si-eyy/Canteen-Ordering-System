@@ -7,9 +7,9 @@ public class Canteen {
 
         // Display menu
         String[] itemNames = {"Burger", "Pizza", "Pasta", "Sandwich", "Milk Tea"};
-
         double[] itemPrices = {80.00, 120.00, 100.00, 70.00, 90.00};
 
+        // Initialize variables to keep track of total quantities and amounts
         int totalQuantity = 0;
         double totalBeforeDiscount = 0.0;
         double totalDiscount = 0.0;
@@ -39,7 +39,23 @@ public class Canteen {
                 double price = itemPrices[itemNumber - 1];
                 double subtotal = price * quantity;
 
-                double discount = 0.0;
+                double discountRate;
+                if (isStudent && subtotal >= 500.00) {
+                    discountRate = 0.15;
+            } else if (subtotal >= 500.00) {
+                discountRate = 0.05;
+            } else if (isStudent) {
+                discountRate = 0.10;
+            } else {
+                discountRate = 0.0;
             }
+
+
+            double discount = subtotal * discountRate;
+            double orderTotal = subtotal - discount;    
+
+            System.out.printf("%nSubtotal: $%.2f%n", subtotal);
+            System.out.printf("Discount: $%.2f%n", discount);
+            System.out.printf("Order total: $%.2f%n", orderTotal);
     }
 }
